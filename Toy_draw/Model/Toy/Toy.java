@@ -52,6 +52,7 @@ public class Toy extends ToyModel {
         this.frequency = frequency;
     }
 
+    @Override
     public String toyToString() {
         return "ID: " + id + "\nНаименование: " + name + "\nКоличество: " + quantity;
     }

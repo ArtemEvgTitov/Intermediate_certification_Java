@@ -12,10 +12,8 @@ public class ReadFile {
     public static ArrayList<Toy> readFile() {
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
-
             allToys = ((ArrayList<Toy>) ois.readObject());
         } catch (Exception ex) {
-
             allToys = new ArrayList<>();
             System.out.println(ex.getMessage());
         }
