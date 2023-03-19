@@ -6,14 +6,14 @@ import Toy_draw.Model.Toy.Toy;
 
 public class DrawMachine {
     
-    private List<Toy> toys;
+    private static List<Toy> toys;
 
     public DrawMachine(){
         this(new ArrayList<>());
     }
 
-    private DrawMachine(List<Toy> products){
-        this.toys = products;
+    public DrawMachine(List<Toy> products){
+        DrawMachine.toys = products;
     }
 
     public List<Toy> getAllToys(){
@@ -22,5 +22,41 @@ public class DrawMachine {
                 result.add(toys.get(i));
         }
         return result;
+    }
+
+    public void getPrizeToy(int y) {
+        int totalFrequency = 0;
+
+        for (Toy toy : toys) {
+            if(toy.getQuantity() > 0) {
+                totalFrequency += toy.getFrequency();
+            }
+        }
+
+        if(totalFrequency == 0){
+            return;
+        }
+
+        int randomNumber = (int) (Math.random() * totalFrequency);
+
+        int currentFrequency = 0;
+
+            for (Toy toy : toys) {
+                if(y <= 0){
+                    break;
+                }
+                if (toy.getQuantity() <= 0) {
+                    continue;
+                }
+                currentFrequency += toy.getFrequency();
+                if (currentFrequency >= randomNumber) {
+                    y -= 1;
+                    System.out.println(toy.toyToString());
+                    toy.setQuantity(toy.getQuantity() - 1);
+                }
+            }
+            if (y > 0){
+                getPrizeToy(y);
+            }
     }
 }

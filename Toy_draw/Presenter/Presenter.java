@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 import Toy_draw.Model.Machine.DrawMachine;
 import Toy_draw.Model.Toy.Toy;
+import Toy_draw.View.ViewChoiceOperation;
 
 public class Presenter {
 
     DrawMachine machine;
+    ViewChoiceOperation view;
 
     static ArrayList<Toy> allToys = new ArrayList<>();
 
@@ -27,9 +29,13 @@ public class Presenter {
         allToys.add(toy5);
         allToys.add(toy6);
 
-        for (Toy toy : allToys) {
-            System.out.println(toy.toyToString());
+        DrawMachine machine = new DrawMachine(allToys);
+        ViewChoiceOperation view = new ViewChoiceOperation();
+        int result = view.getChoice();
+        if (result == 3) {
+            machine.getPrizeToy(1);
         }
+        
     }
 
 }
