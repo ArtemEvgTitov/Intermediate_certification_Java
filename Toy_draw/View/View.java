@@ -1,7 +1,7 @@
 package Toy_draw.View;
 
 /**
- * Класс View 
+ * Класс View
  */
 public class View extends ViewModel {
 
@@ -9,7 +9,7 @@ public class View extends ViewModel {
         return 0;
     }
 
-    public String getString(String msg){
+    public String getString(String msg) {
         return "";
     }
 

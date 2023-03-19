@@ -3,7 +3,7 @@ package Toy_draw.View;
 import java.util.Scanner;
 
 /**
- * Класс для выбора операции 
+ * Класс для выбора операции
  */
 public class ViewChoiceOperation implements IVeiw, IGetValue {
 
@@ -12,7 +12,7 @@ public class ViewChoiceOperation implements IVeiw, IGetValue {
      * Метод запроса ввода от пользователя
      */
     public int getValue(String msg) {
-        try{
+        try {
             Scanner in = new Scanner(System.in);
             System.out.print("Введите " + msg + " > ");
             return in.nextInt();

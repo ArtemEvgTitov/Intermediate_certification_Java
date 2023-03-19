@@ -1,7 +1,8 @@
 package Toy_draw.Model.Toy;
 
 /**
- * Класс Toy. Содержит конструктор Toy, все необходимые Get и Set, а также перевод информации об игрушке в строку
+ * Класс Toy. Содержит конструктор Toy, все необходимые Get и Set, а также
+ * перевод информации об игрушке в строку
  */
 public class Toy extends ToyModel {
 
@@ -55,7 +56,8 @@ public class Toy extends ToyModel {
     }
 
     public String toyToStringAllInfo() {
-        return "\nID: " + id + "\nНаименование: " + name + "\nКоличество: " + quantity + "\nШанс выигрыша: " + frequency;
+        return "\nID: " + id + "\nНаименование: " + name + "\nКоличество: " + quantity + "\nШанс выигрыша: "
+                + frequency;
     }
 
 }

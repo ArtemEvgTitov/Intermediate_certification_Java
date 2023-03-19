@@ -6,5 +6,6 @@ package Toy_draw.View;
 public interface IVeiw {
 
     public String getString(String msg);
+
     public int getChoice();
 }

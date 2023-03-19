@@ -50,7 +50,7 @@ public class Presenter {
             }
             run(1);
         } else if (result == 2) {
-            int password = view.getValue("Пароль админа");
+            int password = view.getValue("Пароль админа (по умолчанию: 404)");
             int count = 0;
 
             if (password == 404) {
