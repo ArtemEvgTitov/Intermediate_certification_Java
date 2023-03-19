@@ -22,4 +22,8 @@ public class ReadFile {
 
         return allToys;
     }
+
+    public static ArrayList<Toy> getAllToys(){
+        return allToys;
+    }
 }
