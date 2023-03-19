@@ -47,7 +47,7 @@ public class Presenter {
             int password = view.getValue("Пароль админа");
             int count = 0;
 
-            if (password == 1) {
+            if (password == 404) {
                 String name = view.getString("Название");
                 int quantity = view.getValue("Количество");
                 int frequency = view.getValue("Шанс выпадения в %");
