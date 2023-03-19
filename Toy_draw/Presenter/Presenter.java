@@ -1,5 +1,9 @@
 package Toy_draw.Presenter;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import Toy_draw.Model.Machine.DrawMachine;
@@ -12,6 +16,7 @@ import Toy_draw.View.ViewChoiceOperation;
 public class Presenter {
 
     static ArrayList<Toy> allToys = new ArrayList<>();
+    static String filename = "toys.dat";
 
     /**
      * Запуск программы
@@ -34,6 +39,7 @@ public class Presenter {
             allToys.add(toy4);
             allToys.add(toy5);
             allToys.add(toy6);
+            safeFile();
         }
 
         int result = view.getChoice();
@@ -56,6 +62,7 @@ public class Presenter {
                 }
                 Toy toy = new Toy(count, name, quantity, frequency);
                 allToys.add(toy);
+                safeFile();
             } else {
                 System.out.println("Неверный пароль");
             }
@@ -70,6 +77,34 @@ public class Presenter {
             System.out.println("Неверный ввод");
             run(1);
         }
+
+    }
+
+    /**
+     * Сохранение в файл
+     */
+    public static void safeFile() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
+            oos.writeObject(allToys);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    /**
+     * Чтение из файла
+     */
+    public static ArrayList<Toy> readFile() {
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename))) {
+            allToys = ((ArrayList<Toy>) ois.readObject());
+        } catch (Exception ex) {
+
+            allToys = new ArrayList<>();
+            System.out.println(ex.getMessage());
+        }
+
+        return allToys;
 
     }
 
