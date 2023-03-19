@@ -5,8 +5,12 @@ package Toy_draw.Console;
  */
 public class View extends ViewModel {
 
-    public double getValue(String string) {
+    public int getValue(String string) {
         return 0;
+    }
+
+    public String getString(String string) {
+        return "Отсутствует";
     }
 
     @Override
