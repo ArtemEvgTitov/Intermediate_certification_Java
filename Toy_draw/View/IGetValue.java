@@ -5,5 +5,5 @@ package Toy_draw.View;
  */
 public interface IGetValue {
 
-    public double getValue(String msg);
+    public int getValue(String msg);
 }

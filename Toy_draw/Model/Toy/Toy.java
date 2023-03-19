@@ -14,12 +14,6 @@ public class Toy extends ToyModel {
         this.frequency = frequency;
     }
 
-    public Toy(String name, int quantity, int frequency) {
-        this.name = name;
-        this.quantity = quantity;
-        this.frequency = frequency;
-    }
-
     public int getID() {
         return id;
     }
@@ -54,7 +48,11 @@ public class Toy extends ToyModel {
 
     @Override
     public String toyToString() {
-        return "ID: " + id + "\nНаименование: " + name + "\nКоличество: " + quantity;
+        return "\nНаименование: " + name + "\nКоличество: " + quantity;
+    }
+
+    public String toyToStringAllInfo() {
+        return "\nID: " + id + "\nНаименование: " + name + "\nКоличество: " + quantity + "\nШанс выигрыша: " + frequency;
     }
 
 }

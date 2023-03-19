@@ -5,8 +5,12 @@ package Toy_draw.View;
  */
 public class View extends ViewModel {
 
-    public double getValue(String string) {
+    public int getValue(String string) {
         return 0;
+    }
+
+    public String getString(String msg){
+        return "";
     }
 
     @Override
