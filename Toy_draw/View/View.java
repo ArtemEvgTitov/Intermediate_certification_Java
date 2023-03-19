@@ -1,7 +1,7 @@
 package Toy_draw.View;
 
 /**
- * Класс View
+ * Класс View 
  */
 public class View extends ViewModel {
 

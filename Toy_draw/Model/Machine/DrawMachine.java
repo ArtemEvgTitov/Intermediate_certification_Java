@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import Toy_draw.Model.Toy.Toy;
 
+/**
+ * Класс DrawMachine. Содержит конструктор DrawMachine, метод получения всех игрушек и метод розыгрыша игрушек.
+ */
 public class DrawMachine {
     
     private static List<Toy> toys;
@@ -16,6 +19,9 @@ public class DrawMachine {
         DrawMachine.toys = products;
     }
 
+    /**
+     * Метод получения всех игрушек.
+     */
     public List<Toy> getAllToys(){
         List<Toy> result = new ArrayList<>();
         for (int i = 0; i < toys.size(); i++) {
@@ -24,6 +30,9 @@ public class DrawMachine {
         return result;
     }
 
+    /**
+     * Метод розыгрыша игрушек.
+     */
     public void getPrizeToy(int y) {
         int totalFrequency = 0;
 

@@ -1,5 +1,8 @@
 package Toy_draw.Model.Toy;
 
+/**
+ * Класс Toy. Содержит конструктор Toy, все необходимые Get и Set, а также перевод информации об игрушке в строку
+ */
 public class Toy extends ToyModel {
 
     private int id;

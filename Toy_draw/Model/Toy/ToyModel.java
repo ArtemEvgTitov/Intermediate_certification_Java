@@ -1,7 +1,7 @@
 package Toy_draw.Model.Toy;
 
 /**
- *  Абстрактный класс игрушки
+ *  Абстрактный класс игрушки 
  */
 public abstract class ToyModel implements iToyModel {
 

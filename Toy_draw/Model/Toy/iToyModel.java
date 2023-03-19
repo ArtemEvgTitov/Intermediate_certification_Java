@@ -1,7 +1,7 @@
 package Toy_draw.Model.Toy;
 
 /**
- * Интерфейс для игрушки.
+ * Интерфейс для игрушки
  */
 public interface iToyModel {
 
