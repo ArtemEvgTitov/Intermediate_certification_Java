@@ -17,7 +17,7 @@ public class ViewChoiceOperation implements IVeiw, IGetValue {
             System.out.print("Введите " + msg + " > ");
             return in.nextInt();
         } catch (Exception ex) {
-            System.out.println("Ввоодить можно только числа.\nПовротире ввод ");
+            System.out.println("Ввоодить можно только числа.\nПовторите ввод ");
             return getValue(msg);
         }
     }
@@ -36,7 +36,7 @@ public class ViewChoiceOperation implements IVeiw, IGetValue {
             System.out.println("4. Выход\n");
             return in.nextInt();
         } catch (Exception ex) {
-            System.out.println("Ввоодить можно только числа.\nПовротире ввод ");
+            System.out.println("Ввоодить можно только числа.\nПовторите ввод ");
             return getChoice();
         }
     }
