@@ -25,7 +25,7 @@ public class ViewChoice implements iView, iGetValue {
     public int getChoice() {
         System.out.println("\nВот какие действия Вам доступны:");
         System.out.println("1. Показать все игрушки");
-        System.out.println("2. Добавить(изменить количество) игрушку");
+        System.out.println("2. Добавить игрушку");
         System.out.println("3. Разыграть игрушки");
         System.out.println("4. Выход");
         System.out.println("Введите цифру с необходимым действием: ");
