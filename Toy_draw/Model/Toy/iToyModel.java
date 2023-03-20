@@ -8,3 +8,4 @@ public interface iToyModel {
     public String toyToString();
 
 }
+
