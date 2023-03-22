@@ -26,6 +26,18 @@ public class Presenter {
         DrawMachine machine = new DrawMachine(allToys);
         ViewChoiceOperation view = new ViewChoiceOperation();
 
+        int timeToWait = 4; 
+        System.out.print("\nЗапуск");
+        try {
+            for (int i=0; i<timeToWait ; i++) {
+                Thread.sleep(1000);
+                System.out.print(".");
+            }
+        } catch (InterruptedException ie)
+        {
+            Thread.currentThread().interrupt();
+        }
+
         if (launch == 0) {
             Toy toy1 = new Toy(0, "Кукла", 1, 10);
             Toy toy2 = new Toy(1, "Машинка", 2, 15);
