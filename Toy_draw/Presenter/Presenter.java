@@ -26,15 +26,14 @@ public class Presenter {
         DrawMachine machine = new DrawMachine(allToys);
         ViewChoiceOperation view = new ViewChoiceOperation();
 
-        int timeToWait = 4; 
+        int timeToWait = 4;
         System.out.print("\nЗапуск");
         try {
-            for (int i=0; i<timeToWait ; i++) {
+            for (int i = 0; i < timeToWait; i++) {
                 Thread.sleep(1000);
                 System.out.print(".");
             }
-        } catch (InterruptedException ie)
-        {
+        } catch (InterruptedException ie) {
             Thread.currentThread().interrupt();
         }
 
